@@ -1,4 +1,7 @@
 import streamlit as st
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 st.set_page_config(page_title="MonitorWater - Home", page_icon="🏠", layout="wide", initial_sidebar_state="expanded")
 
@@ -47,11 +50,15 @@ with st.expander("💻 Tecnologias e Biblioteca Utilizadas"):
 
 st.divider()
 
-st.markdown("<p style='text-align: center; font-weight: 400; font-size: 12px;padding-top: 30px;'>Projeto em desenvolvimento proposto por Prof. Dr. Thiago de Loiola em parceria com Laboratório de Química da UFT (LAPEQ)</p>", unsafe_allow_html=True)
+st.markdown("""
+<p style='text-align: center; font-weight: 400; font-size: 12px;padding-top: 30px;'>
+    Projeto em desenvolvimento proposto por Prof. Dr. Thiago de Loiola 
+    em parceria com Laboratório de Pesquisa em Química Ambiental e de Biocombustíveis (Lapeq)
+</p>""", unsafe_allow_html=True)
 col1, col2, col3, col4 = st.columns([1,2,2, 1])
 
 
 with col2:
-    st.image("assets/logo-ifto.png", width=80)
+    st.image(str(BASE_DIR / "assets" / "logo-ifto.png"), width=80)
 with col3:
-    st.image("assets/logo-lapeq.jpg",  width=80)
+    st.image(str(BASE_DIR / "assets" / "logo-lapeq.jpg"), width=80)
