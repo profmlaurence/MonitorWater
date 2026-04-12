@@ -1,6 +1,6 @@
 # 🚰 MonitorWater
 
-Sistema de monitoramento de qualidade da água desenvolvido como protótipo para o ecossistema de monitoramento ambiental inteligente do **IFTO – Campus Araguatins**, em parceria com o **Laboratório de Química da UFT (LAPEQ)**.
+Sistema de monitoramento de qualidade da água desenvolvido como protótipo para o ecossistema de monitoramento ambiental inteligente do **IFTO – Campus Araguatins**, em parceria com o **Laboratório de Pesquisa em Química Ambiental e de Biocombustíveis (LAPEQ)**.
 
 A aplicação permite **visualizar**, **explorar** e **prever** a potabilidade de amostras de água com base em propriedades físico-químicas, utilizando técnicas de análise exploratória de dados e aprendizado de máquina.
 
@@ -36,29 +36,6 @@ A página de **Análise Exploratória** oferece gráficos interativos organizado
 ## 🧪 Previsão de Potabilidade
 
 A página de **Previsão** permite ao usuário ajustar parâmetros físico-químicos da água via sliders interativos e obter uma classificação instantânea de potabilidade (Potável / Não Potável) com nível de confiança, usando um modelo de **Random Forest** treinado com `scikit-learn`.
-
----
-
-## 🗂️ Estrutura do Projeto
-
-```
-MonitorWater/
-├── 0_🏠_Home.py              # Página inicial da aplicação
-├── pages/
-│   ├── 1_📊_Análise Exploratória.py   # EDA com gráficos interativos
-│   └── 2_🧪_Previsão.py               # Previsão de potabilidade (ML)
-├── utils/
-│   ├── data.py                # Carregamento de dados (Kaggle)
-│   └── plotting.py            # Classe WaterQualityPlotter (Plotly)
-├── models/
-│   ├── train.py               # Script de treinamento do modelo
-│   └── best_model.pkl         # Modelo treinado (Random Forest)
-├── assets/                    # Logos e imagens
-├── .gitignore
-└── README.md
-```
-
----
 
 ## ⚙️ Tecnologias Utilizadas
 
@@ -114,29 +91,14 @@ O projeto está preparado para deploy no **Google Cloud Run**. Consulte a docume
 
 ---
 
-## 📄 Dataset
-
-O dataset utilizado é o [**Water Potability**](https://www.kaggle.com/datasets/adityakadiwal/water-potability) disponível no Kaggle, contendo as seguintes propriedades:
-
-| Propriedade | Descrição |
-|---|---|
-| `ph` | Potencial hidrogeniônico |
-| `Hardness` | Dureza da água (mg/L) |
-| `Solids` | Sólidos totais dissolvidos (ppm) |
-| `Chloramines` | Cloraminas (ppm) |
-| `Sulfate` | Sulfato (mg/L) |
-| `Conductivity` | Condutividade elétrica (μS/cm) |
-| `Organic_carbon` | Carbono orgânico total (ppm) |
-| `Trihalomethanes` | Trihalometanos (μg/L) |
-| `Turbidity` | Turbidez (NTU) |
-| `Potability` | Potabilidade (0 = Não potável, 1 = Potável) |
-
----
-
 ## 👥 Créditos
 
-Projeto proposto por **Prof. Dr. Thiago de Loiola** em parceria com o **Laboratório de Química da UFT (LAPEQ)**.
+**Laboratório de Pesquisa em Química Ambiental e de Biocombustíveis (Lapeq)**.
 
-<p align="center">
-  <strong>IFTO – Campus Araguatins</strong> &nbsp;•&nbsp; <strong>LAPEQ – UFT</strong>
-</p>
+---
+## Equipe Executora
+
+- **[Prof. Dr. Thiago de Loiola]** - [Coordenador do Projeto]
+- **[Prof. Dr. Emerson Adriano Guarda]** - [Coordenador do LAPEQ]
+- **[Prof. Me. Moisés Laurence]** - [Desenvolvedor]
+
