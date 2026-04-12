@@ -1,0 +1,26 @@
+# Virtual environments
+.venv
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git repository
+.git
+.gitignore
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+
+# Streamlit specific (dependendo da necessidade)
+# .streamlit/ se houver segredos locais que não devem ir pra nuvem (mas o config.toml precisa ir)
+
+# Local data (se for o caso)
+# datasets/
