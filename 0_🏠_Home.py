@@ -1,54 +1,35 @@
 import streamlit as st
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+import os
+
+# Verificação de ambiente: local busca na pasta 'assets' a partir da raiz, nuvem usa Path(__file__)
+if os.path.isdir("assets") or os.environ.get("STREAMLIT_SHARING_MODE"):
+    BASE_DIR = Path(".") if os.path.isdir("assets") and not os.environ.get("STREAMLIT_SHARING_MODE") else Path(__file__).resolve().parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
 
 st.set_page_config(page_title="MonitorWater - Home", page_icon="🏠", layout="wide", initial_sidebar_state="expanded")
 
 st.title("🚰 MonitorWater")
+
 st.markdown("""
 Este é um protótipo do sistema de monitoramento de qualidade da água, que deverá compor o ecossistema de 
 monitoramento ambiental inteligente  do IFTO - Campus Araguatins.
 
 Neste módulo é possível visualizar a qualidade da água e fazer previsões de potabilidade.
-
-Use o menu lateral para navegar entre as funcionalidades.
 """)
-with st.expander("🛠️ Status das funcionalidades"):
-    st.markdown("""
-    ✅ Análise Exploratória de Dados (EDA)
 
-    ✅ Previsão de Potabilidade
+st.info("Use o menu lateral para navegar entre as funcionalidades.")
 
-    ☑️ Monitoramento em Tempo Real
+col1, col2, col3, col4 = st.columns([1,2,2, 1])
 
-    ☑️ Alertas
-
-    ☑️ Relatórios
-
-    ☑️ Integração com IoT
-
-    ☑️ Integração com Banco de Dados
-
-    ✅ Integração com Cloud
-
-    ☑️ Integração com Mobile
-
-    ✅ Integração com Web
-    """)
-
-
-
-with st.expander("💻 Tecnologias e Biblioteca Utilizadas"):
-    st.markdown("""
-    - **Streamlit**: Framework para desenvolvimento da aplicação web.
-    - **Pandas**: Biblioteca para manipulação e análise de dados.
-    - **Scikit-learn**: Biblioteca para aprendizado de máquina.
-    - **Matplotlib**: Biblioteca para visualização de dados.
-    - **Seaborn**: Biblioteca para visualização de dados.
-    """)
-
-st.divider()
+with col2:
+    if st.button("📊 Análise Exploratória", width='stretch', type='secondary'):
+        st.switch_page("pages/1_📊_Análise Exploratória.py")
+with col3:
+    if st.button("🧪 Previsão de Potabilidade", width='stretch', type='secondary'):
+        st.switch_page("pages/2_🧪_Previsão.py")
 
 st.markdown("""
 <p style='text-align: center; font-weight: 400; font-size: 12px;padding-top: 30px;'>
