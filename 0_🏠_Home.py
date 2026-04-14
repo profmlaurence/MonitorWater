@@ -30,7 +30,7 @@ with col2:
         st.switch_page("pages/1_📊_Análise Exploratória.py")
 with col3:
     if st.button("🖥️ Monitoramento", width='stretch', type='secondary'):
-        st.switch_page("pages/3_🖥️_Monitoramento.py")
+        st.switch_page("pages/2_🖥️_Monitoramento.py")
 with col4:
     if st.button("🧪 Previsão", width='stretch', type='secondary'):
         st.switch_page("pages/2_🧪_Previsão.py")
