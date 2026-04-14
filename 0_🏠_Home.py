@@ -23,13 +23,16 @@ Neste módulo é possível visualizar a qualidade da água e fazer previsões de
 
 st.info("Use o menu lateral para navegar entre as funcionalidades.")
 
-col1, col2, col3, col4 = st.columns([1,2,2, 1])
+col1, col2, col3, col4, col5= st.columns([1,2,2,2, 1])
 
 with col2:
     if st.button("📊 Análise Exploratória", width='stretch', type='secondary'):
         st.switch_page("pages/1_📊_Análise Exploratória.py")
 with col3:
-    if st.button("🧪 Previsão de Potabilidade", width='stretch', type='secondary'):
+    if st.button("🖥️ Monitoramento", width='stretch', type='secondary'):
+        st.switch_page("pages/3_🖥️_Monitoramento.py")
+with col4:
+    if st.button("🧪 Previsão", width='stretch', type='secondary'):
         st.switch_page("pages/2_🧪_Previsão.py")
 
 st.markdown("""
@@ -37,7 +40,7 @@ st.markdown("""
     Projeto em desenvolvimento proposto por Prof. Dr. Thiago de Loiola 
     em parceria com Laboratório de Pesquisa em Química Ambiental e de Biocombustíveis (Lapeq)
 </p>""", unsafe_allow_html=True)
-col1, col2, col3, col4 = st.columns([1,2,2, 1])
+col1, col2, col3, col4 = st.columns([1,2,2,1])
 
 
 with col2:
