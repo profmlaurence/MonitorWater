@@ -24,7 +24,7 @@ with st.expander("🛠️ Status das funcionalidades"):
 
     ☑️ Integração com IoT
 
-    ☑️ Integração com Banco de Dados
+    ☑️ Monitoramento
 
     ✅ Integração com Cloud
 

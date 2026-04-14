@@ -12,6 +12,7 @@ else:
 st.set_page_config(page_title="MonitorWater - Home", page_icon="🏠", layout="wide", initial_sidebar_state="expanded")
 
 st.title("🚰 MonitorWater")
+st.logo(str(BASE_DIR / "assets" / "logo-ifto.png"))
 
 st.markdown("""
 Este é um protótipo do sistema de monitoramento de qualidade da água, que deverá compor o ecossistema de 
